@@ -24,7 +24,7 @@ runs:
         # case-insensitive
         shopt -s nocasematch
 
-        if [[ "${{ inputs.title }}" =~ ${{ inputs.regex }} ]]; then
+        if [[ '${{ inputs.title }}' =~ ${{ inputs.regex }} ]]; then
           echo "::error::Title marked as work in progress"
           exit 1
         else
